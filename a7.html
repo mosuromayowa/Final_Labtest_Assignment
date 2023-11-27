@@ -41,6 +41,16 @@ function addColumn() {
   }
 }
 
+function addRow() {
+  var table = document.querySelector('table');
+  var newRow = table.insertRow();
+  var cols = table.rows[0].cells.length;
+  for (var i = 0; i < cols; i++) {
+    var cell = newRow.insertCell();
+    cell.appendChild(document.createTextNode('New Row'));
+  }
+}
+
 	</script>
 	
 </html>

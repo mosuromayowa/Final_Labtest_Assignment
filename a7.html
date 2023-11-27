@@ -17,6 +17,21 @@ function generateTable() {
   var cols = document.getElementById('t2').value;
   var table = document.createElement('table');
 	
+  for (var i = 0; i < rows; i++) {
+    var row = table.insertRow();
+    for (var j = 0; j < cols; j++) {
+      var cell = row.insertCell();
+      cell.appendChild(document.createTextNode('Row ' + (i + 1) + ', Column ' + (j + 1)));
+    }
+  }
+
+  // Clear the screen and append the table
+  document.body.innerHTML = '';
+  document.body.appendChild(table);
+  document.body.appendChild(document.getElementById('b2'));
+  document.body.appendChild(document.getElementById('b3'));
+}
+
 	</script>
 	
 </html>

@@ -32,6 +32,15 @@ function generateTable() {
   document.body.appendChild(document.getElementById('b3'));
 }
 
+function addColumn() {
+  var table = document.querySelector('table');
+  var rows = table.rows;
+  for (var i = 0; i < rows.length; i++) {
+    var cell = rows[i].insertCell();
+    cell.appendChild(document.createTextNode('New Column'));
+  }
+}
+
 	</script>
 	
 </html>
